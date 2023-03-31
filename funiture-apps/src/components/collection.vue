@@ -1,0 +1,54 @@
+<template>
+    <section>
+        <div class="flex justify-between px-4">
+            <span>Chairs Collection</span>
+            <div class="border border-black rounded-full flex justify-center items-center w-9 h-9">
+                <i class="fa fas-cog"></i>
+            </div>
+        </div>
+        <div class="flex space-x-3 px-4 overflow-x-auto min-h-[18rem]">
+            <article class="h-[16rem] min-w-[65%] relative flex flex-col items-center justify-center bg-yellow-200 rounded-t-[10rem]">
+                <div class="h-[65%] w-[70%]">
+                    <img src="@/assets/images/chairs.jpg" alt="photo" class="object-fit h-full w-full">
+                </div>
+                <div class="absolute -bottom-6 w-[90%] rounded-lg m-auto flex justify-between items-center shadow-2xl bg-white px-4 py-1">
+                    <div class="flex flex-col">
+                        <span>Winfg Chair</span>
+                        <span>$22</span>
+                    </div>
+                    <div class="rounded-full flex justify-center items-center w-9 h-9 bg-yellow-500">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="h-[16rem] min-w-[65%] relative flex flex-col items-center justify-center bg-yellow-200 rounded-t-[10rem]">
+                <div class="h-[65%] w-[70%]">
+                    <img src="@/assets/images/chairs.jpg" alt="photo" class="object-fit h-full w-full">
+                </div>
+                <div class="absolute -bottom-6 w-[90%] rounded-lg m-auto flex justify-between items-center shadow-2xl bg-white px-4 py-1">
+                    <div class="flex flex-col">
+                        <span>Winfg Chair</span>
+                        <span>$22</span>
+                    </div>
+                    <div class="rounded-full flex justify-center items-center w-9 h-9 bg-yellow-500">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="h-[16rem] min-w-[65%] relative flex flex-col items-center justify-center bg-yellow-200 rounded-t-[10rem]">
+                <div class="h-[65%] w-[70%]">
+                    <img src="@/assets/images/chairs.jpg" alt="photo" class="object-fit h-full w-full">
+                </div>
+                <div class="absolute -bottom-6 w-[90%] rounded-lg m-auto flex justify-between items-center shadow-2xl bg-white px-4 py-1">
+                    <div class="flex flex-col">
+                        <span>Winfg Chair</span>
+                        <span>$22</span>
+                    </div>
+                    <div class="rounded-full flex justify-center items-center w-9 h-9 bg-yellow-500">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</template>
