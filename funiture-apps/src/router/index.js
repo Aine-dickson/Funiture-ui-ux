@@ -25,6 +25,12 @@ const routes = [
         path: "/scan",
         name: "scan",
         component: () => import('@/views/pages/scan.vue')
+      },
+      {
+        path:"/:cat/:name",
+        name: "item",
+        props: true,
+        component: () => import('@/views/pages/item.vue')
       }
     ]
   },

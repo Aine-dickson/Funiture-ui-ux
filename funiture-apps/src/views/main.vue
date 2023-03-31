@@ -1,13 +1,19 @@
 <template>
     <section class="screen">
-        <div class="header">
+        <div v-if="screenState == 'general'" class="header">
             <app_header class="h-full"></app_header>
+        </div>
+        <div v-else>
+            <item_header/>
         </div>
         <div class="main">
             <app_main class="h-full"></app_main>
         </div>
-        <div class="footer">
+        <div v-if="screenState == 'general'" class="footer">
             <app_footer class="h-full"></app_footer>
+        </div>
+        <div v-else>
+            <item_footer/>
         </div>
     </section>
 </template>
@@ -17,22 +23,31 @@
     import app_footer from './includes/app_footer.vue'
     import app_header from './includes/app_header.vue'
     import app_main from './includes/app_main.vue'
+    import item_footer from '@/components/item_footer.vue'
+    import item_header from '@/components/item_header.vue'
 
     import { useRouter } from 'vue-router'
+    import { useStore } from 'vuex'
     import { onMounted } from 'vue'
 
     export default {
         components: {
             app_footer,
             app_header,
-            app_main
+            app_main,
+            item_footer,
+            item_header
         },
         setup(){
             const router = useRouter()
+            const store = useStore()
+            const screenState = store.state.screen
 
             onMounted(() => {
                 router.push('/home')
             })
+
+            return {screenState}
         }
     }
 

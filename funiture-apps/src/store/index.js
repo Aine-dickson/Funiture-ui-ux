@@ -1,9 +1,15 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  state: {},
+  state: {
+    screen: "general"
+  },
   getters: {},
-  mutations: {},
+  mutations: {
+    screenControl(state, payload){
+      state.screen = payload
+    }
+  },
   actions: {},
   modules: {},
 });
