@@ -1,14 +1,14 @@
 <template>
     <header class="flex justify-between m-4 text-xl items-center">
         <router-link :to="{name: 'home'}">
-            <div class="border border-gray-500 flex justify-center items-center rounded-[50%] w-8">
+            <div class="border border-gray-500 flex justify-center items-center rounded-[50%] w-8 h-8">
                 <i class="fas fa-arrow-left"></i>
             </div>
         </router-link>
         <span>{{ name }}</span>
-        <div @click="favMaker" class="border border-gray-500 flex justify-center items-center rounded-full w-8">
+        <div @click="favMaker" class="border border-gray-500 flex justify-center items-center rounded-full w-8 h-8">
             <i v-if="isFav" class="fas fa-heart text-red-500"></i>
-            <i v-else class="fas- fa-heart"></i>
+            <i v-else class="fas fa-heart"></i>
         </div>
     </header>
 </template>
@@ -28,7 +28,7 @@
             const isFav = ref(props.item_state)
 
             const favMaker = () => {
-                console.log(`Added ${props.item_id} to favorites`)
+                isFav.value = !isFav.value
             }
 
             return { favMaker, name, isFav }

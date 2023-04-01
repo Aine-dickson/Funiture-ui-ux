@@ -3,7 +3,7 @@
         <div v-if="screenState == 'general'" class="header">
             <app_header class="h-full"></app_header>
         </div>
-        <div v-else>
+        <div v-else class="header">
             <item_header/>
         </div>
         <div class="main">
@@ -12,7 +12,7 @@
         <div v-if="screenState == 'general'" class="footer">
             <app_footer class="h-full"></app_footer>
         </div>
-        <div v-else>
+        <div v-else class="footer">
             <item_footer/>
         </div>
     </section>
@@ -28,7 +28,7 @@
 
     import { useRouter } from 'vue-router'
     import { useStore } from 'vuex'
-    import { onMounted } from 'vue'
+    import { onMounted, ref } from 'vue'
 
     export default {
         components: {
@@ -41,7 +41,7 @@
         setup(){
             const router = useRouter()
             const store = useStore()
-            const screenState = store.state.screen
+            const screenState = ref(store.state.screen)
 
             onMounted(() => {
                 router.push('/home')

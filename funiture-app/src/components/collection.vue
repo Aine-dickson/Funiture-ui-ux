@@ -1,8 +1,8 @@
 <template>
     <section>
-        <div class="flex justify-between px-4">
+        <div class="flex justify-between items-center px-4 mb-4">
             <span>Chairs Collection</span>
-            <div class="border border-black rounded-full flex justify-center items-center w-9 h-9">
+            <div class="border border-black rounded-full flex justify-center items-center w-7 h-7">
                 <i class="fa fas-cog"></i>
             </div>
         </div>

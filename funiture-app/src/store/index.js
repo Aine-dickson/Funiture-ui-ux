@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    screen: "general"
+    screen: "derived"
   },
   getters: {},
   mutations: {
