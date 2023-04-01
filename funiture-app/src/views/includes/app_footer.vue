@@ -1,5 +1,5 @@
 <template>
-    <footer class="border border-black rounded-[5rem] flex justify-evenly items-center w-[90%] m-auto h-14">
+    <footer class="border border-black rounded-[5rem] flex justify-evenly items-center w-[90%] m-auto h-14 bg-black">
         <nav>
             <router-link :to="{name: 'home'}">
                 <div class="flex flex-col items-center text-2xl">
@@ -8,7 +8,7 @@
                 </div>
             </router-link>
         </nav>
-        <div class="border-l border-l-black h-[40%]"></div>
+        <div class="border-l border-l-white h-[40%]"></div>
         <nav>
             <router-link :to="{name: 'scan'}">
                 <div class="flex flex-col items-center text-2xl">
@@ -17,7 +17,7 @@
                 </div>
             </router-link>
         </nav>
-        <div class="border-l border-l-black h-[40%]"></div>
+        <div class="border-l border-l-white h-[40%]"></div>
         <nav>
             <router-link :to="{name: 'wishlist'}">
                 <div class="flex flex-col items-center text-2xl">
@@ -26,14 +26,16 @@
                 </div>
             </router-link>
         </nav>
-        <div class="border-l border-l-black h-[40%]"></div>
+        <div class="border-l border-l-white h-[40%]"></div>
         <div>
-            <router-link :to="{name:'account'}">
-                <div class="flex flex-col items-center text-2xl">
-                    <span><i class="fas fa-user"></i></span>
-                    <span class="text-xs">ACCOUNT</span>
-                </div>
-            </router-link>
+            <nav>
+                <router-link :to="{name:'account'}">
+                    <div class="flex flex-col items-center text-2xl">
+                        <span><i class="fas fa-user"></i></span>
+                        <span class="text-xs">ACCOUNT</span>
+                    </div>
+                </router-link>
+            </nav>
         </div>
     </footer>
 </template>

@@ -28,7 +28,7 @@
 
     import { useRouter } from 'vue-router'
     import { useStore } from 'vuex'
-    import { onMounted, ref } from 'vue'
+    import { onMounted, ref, computed } from 'vue'
 
     export default {
         components: {
@@ -41,7 +41,7 @@
         setup(){
             const router = useRouter()
             const store = useStore()
-            const screenState = ref(store.state.screen)
+            const screenState = computed(() => store.state.screen)
 
             onMounted(() => {
                 router.push('/home')

@@ -2,7 +2,7 @@
     <main class="text-xl">
         <article class="rounded-t-[10rem] h-[18rem] w-[80%] m-auto bg-yellow-200 mb-4 flex items-center justify-center">
             <div class="h-[65%] w-[70%]">
-                <img src="@/assets/images/chairs.jpg" :alt="name" class="object-fill h-full w-full">
+                <img src="@/assets/images/seat.jpg" :alt="name" class="object-fill h-full w-full">
             </div>
         </article>
         <section class="space-y-2">
