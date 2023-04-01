@@ -1,0 +1,53 @@
+{
+  "name": "furniture-app-server",
+  "version": "1.0.0",
+  "description": "Creates a link between the Funiture-ui-ux interface with its server",
+  "main": "app.js",
+  "scripts": {
+    "test": "octopus-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aine-dickson/Funiture-ui-ux.git"
+  },
+  "keywords": [
+    "All",
+    "rights",
+    "about",
+    "this",
+    "server",
+    "and",
+    "the",
+    "front",
+    "end",
+    "a",
+    "reserved",
+    "to",
+    "Ainebyoona",
+    "Dickson.",
+    "Do",
+    "not",
+    "duplicate",
+    "or",
+    "make",
+    "any",
+    "changes",
+    "without",
+    "authorization",
+    "from",
+    "author"
+  ],
+  "author": "Ainebyoona Dickson a.k.a octopus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aine-dickson/Funiture-ui-ux/issues"
+  },
+  "homepage": "https://github.com/Aine-dickson/Funiture-ui-ux#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0",
+    "mongoose": "^7.0.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.22"
+  }
+}
