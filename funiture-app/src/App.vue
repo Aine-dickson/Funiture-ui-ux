@@ -12,7 +12,10 @@
 
 nav {
   a {
-    color: white;
+    color: black;
+    &.footer {
+      color: white;
+    }
 
     &.router-link-exact-active {
       color: #42b983;
