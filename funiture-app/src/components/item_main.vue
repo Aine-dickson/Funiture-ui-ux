@@ -11,7 +11,7 @@
                     <span>{{ name }}</span>
                     <span>{{ reviews }}</span>
                 </div>
-                <div class="flex justify-between items-center w-28 bg-gray-500 rounded-3xl h-9 text-2xl">
+                <div class="flex justify-between items-center w-28 bg-gray-500 rounded-3xl h-9 text-2xl dark:text-black">
                     <span @click="dec" class="flex justify-center items-center bg-white rounded-full h-full w-9">-</span>
                     <span class="font-bold text-white">{{ quantity }}</span>
                     <span @click="inc" class="flex justify-center items-center bg-white rounded-full h-full w-9">+</span>
