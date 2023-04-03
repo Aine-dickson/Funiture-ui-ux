@@ -1,7 +1,7 @@
 <template>
-    <section>
-        <div>
-            <nav v-if="!splash" class="text-2xl flex items-center space-x-1 mt-8 justify-center text-black">
+    <section class="dark:bg-slate-950 h-screen dark:text-white">
+        <div class="pt-8">
+            <nav v-if="!splash" class="text-2xl flex items-center space-x-1 justify-center">
                 <router-link :to="{name: 'login'}">
                     <span>Login</span>
                 </router-link>

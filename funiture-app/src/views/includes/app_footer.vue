@@ -1,5 +1,5 @@
 <template>
-    <footer class="border border-black rounded-[5rem] flex justify-evenly items-center w-[90%] m-auto h-14 bg-black">
+    <footer class="border border-black dark:bg-white rounded-[5rem] flex justify-evenly items-center w-[90%] m-auto h-14 bg-black">
         <nav>
             <router-link :to="{name: 'home'}">
                 <div class="flex flex-col items-center text-2xl">

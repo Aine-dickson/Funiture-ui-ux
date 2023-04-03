@@ -2,7 +2,7 @@
     <section>
         <div class="flex justify-between items-center px-4 mb-4">
             <span class="font-bold text-xl">Chairs Collection</span>
-            <div class="border border-black rounded-full flex justify-center items-center w-7 h-7">
+            <div class="border border-black rounded-full flex justify-center items-center w-7 h-7 dark:border-white dark:text-white">
                 <i class="fas fa-arrows-turn-right"></i>
             </div>
         </div>
@@ -13,7 +13,7 @@
                         <img src="@/assets/images/seat.jpg" :alt="item.name" class="object-fit h-full w-full">
                     </div>
                     <div class="absolute -bottom-6 w-[90%] rounded-lg m-auto flex justify-between items-center shadow-2xl bg-white px-4 py-1">
-                        <div class="flex flex-col">
+                        <div class="flex flex-col dark:text-black">
                             <span>{{ item.name }}</span>
                             <span>{{ item.price }}</span>
                         </div>

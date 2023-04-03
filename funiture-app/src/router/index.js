@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: '/',
+    path: '/auth',
     name: "auth",
     component: () => import('@/auth/auth.vue'),
     children: [
@@ -29,7 +29,7 @@ const routes = [
     ]
   },
   {
-    path: "/main",
+    path: "/",
     name: "main",
     component: () => import('@/views/main.vue'),
     children: [

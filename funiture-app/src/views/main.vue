@@ -1,5 +1,5 @@
 <template>
-    <section class="screen">
+    <section class="screen dark:text-white dark:bg-slate-950">
         <div v-if="screenState == 'general'" class="header">
             <app_header class="h-full"></app_header>
         </div>
