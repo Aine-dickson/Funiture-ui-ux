@@ -4,6 +4,7 @@ const multer = require('multer')
 const parser = require('body-parser')
 const cors = require('cors')
 const server = require('mongoose')
+const bodyParser = require('body-parser')
 
 app.use(cors())
 
@@ -26,9 +27,9 @@ server.connect('mongodb://127.0.0.1:27017/furniture_store')
 })
 
 
-app.post('/login-data', parser.json(), (req, res) => {
-    console.log("Request made")
-    let name = req.body.userName
+app.post('/signup', parser.json(), (req, res) => {
+    console.log("SignUp request made")
+    let name = req.body.name
     let email = req.body.email
     let password = req.body.password
     const user = new User({
@@ -43,5 +44,18 @@ app.post('/login-data', parser.json(), (req, res) => {
     .catch(err => {
         console.log(err.message)
     })
-    // res.redirect('/home')
+})
+
+app.post('/login', parser.json(), (req, res) => {
+    console.log('Login request made')
+    let email = req.body.email
+    let password = req.body.password
+    User.find({email: email})
+    .then(userObject => {
+        console.log(userObject)
+        res.json(userObject)
+    })
+    .catch(err => {
+        console.log("Error:" + err.message)
+    })
 })
