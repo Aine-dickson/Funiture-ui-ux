@@ -8,7 +8,7 @@
                 </div>
             </router-link>
         </nav>
-        <div class="border-l border-l-white h-[40%]"></div>
+        <div class="border-l border-l-white dark:border-l-black h-[40%]"></div>
         <nav>
             <router-link :to="{name: 'scan'}">
                 <div class="flex flex-col items-center text-2xl">
@@ -17,7 +17,7 @@
                 </div>
             </router-link>
         </nav>
-        <div class="border-l border-l-white h-[40%]"></div>
+        <div class="border-l border-l-white dark:border-l-black h-[40%]"></div>
         <nav>
             <router-link :to="{name: 'wishlist'}">
                 <div class="flex flex-col items-center text-2xl">
@@ -26,7 +26,7 @@
                 </div>
             </router-link>
         </nav>
-        <div class="border-l border-l-white h-[40%]"></div>
+        <div class="border-l border-l-white dark:border-l-black h-[40%]"></div>
         <div>
             <nav>
                 <router-link :to="{name:'account'}">

@@ -26,6 +26,7 @@
 
             onMounted(() => {
                 store.commit("screenControl", "general")
+                store.commit("pageManager", "home")
             })
         }
     }
