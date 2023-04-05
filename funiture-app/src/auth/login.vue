@@ -25,20 +25,19 @@
 <script>
 
     import { ref, onMounted } from 'vue';
+    import { useRouter } from 'vue-router';
     import { useStore } from 'vuex';
 
     export default {
         setup(){
             const store = useStore()
+            const router = useRouter()
 
             const password = ref(false)
             const userEmail = ref('')
             const userPassword = ref('')
 
-            const userObject = {
-                email: userEmail.value,
-                password: userPassword.value
-            }
+            
 
             const passManager = () => {
                 if(userPassword.value.length > 1){
@@ -48,11 +47,25 @@
                 }
             }
 
+            const formHandler = (e) => {
+                const userObject = {
+                    email: userEmail.value,
+                    password: userPassword.value
+                }
+                store.dispatch('login', userObject)
+                .then(() => {
+                    router.push('/home')
+                })
+                userEmail.value = ''
+                userPassword.value = ''
+                return true
+            }
+
             onMounted(() => {
                 store.commit("splashControl", false)
             })
 
-            return { password, userEmail, userPassword, passManager }
+            return { password, userEmail, userPassword, passManager, formHandler }
         }
     }
 

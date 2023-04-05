@@ -36,11 +36,13 @@
 <script>
 
     import { ref, onMounted } from 'vue';
+    import { useRouter } from 'vue-router';
     import { useStore } from 'vuex';
 
     export default {
         setup(){
             const store = useStore()
+            const router = useRouter()
 
             const password = ref(false)
             const confirm = ref('')
@@ -90,6 +92,9 @@
                     email: userEmail.value
                 }
                 store.dispatch("signUp", user)
+                .then(() => {
+                    router.push('/home')
+                })
                 userPassword.value = ''
                 userEmail.value = ''
                 userName.value = ''

@@ -14,6 +14,9 @@ export default createStore({
     userUpdate(state, payload){
       state.user = payload
     },
+    userUpdate(state, payload){
+      state.user = payload
+    },
     screenControl(state, payload){
       state.screen = payload
     },
@@ -25,14 +28,20 @@ export default createStore({
     }
   },
   actions: {
-    async signUp(state, user){
-      console.log(user)
+    async signUp(state, userObject){
       try{
-        const response = await axios.post("http://localhost:2000/login-data", user)
-        state.commit("userUpdate", response)
-        console.log(response)
+        const response = await axios.post("http://localhost:2000/signup", userObject)
+        state.commit("userUpdate", response.data)
       } catch {
-        (err) => console.log(err.message)
+        err => { console.log(err.message) }
+      }
+    },
+    async login(state, userObject){
+      try{
+        const response = await axios.post('http://localhost:2000/login', userObject)
+        state.commit("userUpdate", response.data)
+      } catch {
+        err => { console.log(err.message) }
       }
     }
   },

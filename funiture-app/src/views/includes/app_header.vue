@@ -25,7 +25,7 @@
 
             const userName = computed(() => {
                 if(store.state.user){
-                    return store.state.user.userName
+                    return store.state.user.name
                 } else {
                     return "No account yet!"
                 }
