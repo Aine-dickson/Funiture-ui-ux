@@ -1,14 +1,12 @@
+import axios from "axios";
 import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    user: {
-      userName: "Aine Dixon"
-    },
+    user: null,
     screen: "general",
     splash: "true",
     page: "",
-    pages: ["home", "wishlist", "scan", "account"]
   },
   getters: {
   },
@@ -27,11 +25,14 @@ export default createStore({
     }
   },
   actions: {
-    async signUp(){
+    async signUp(state, user){
+      console.log(user)
       try{
-
+        const response = await axios.post("http://localhost:2000/login-data", user)
+        state.commit("userUpdate", response)
+        console.log(response)
       } catch {
-
+        (err) => console.log(err.message)
       }
     }
   },

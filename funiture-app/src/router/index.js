@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: '/auth',
+    path: '/',
     name: "auth",
     component: () => import('@/auth/auth.vue'),
     children: [

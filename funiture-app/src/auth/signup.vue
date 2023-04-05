@@ -48,11 +48,7 @@
             const userEmail = ref('')
             const userPassword = ref('')
 
-            const userObject = {
-                name: userName.value,
-                password: userPassword.value,
-                email: userEmail.value
-            }
+            
             const errors = ref([])
 
             const errorHandler = (type) => {
@@ -88,7 +84,17 @@
                 }
             } 
             const formHandler = (e) => {
-                errorHandler()
+                const user = {
+                    name: userName.value,
+                    password: userPassword.value,
+                    email: userEmail.value
+                }
+                store.dispatch("signUp", user)
+                userPassword.value = ''
+                userEmail.value = ''
+                userName.value = ''
+                password.value = ''
+                return true
             }
 
             onMounted(() => {
