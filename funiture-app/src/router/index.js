@@ -2,6 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
+    path: '/',
+    name: 'splash',
+    component: () => import('@/views/splash.vue')
+  },
+  {
     path: '/auth',
     name: "auth",
     component: () => import('@/auth/auth.vue'),
@@ -21,15 +26,10 @@ const routes = [
         name: "password",
         component: () => import('@/auth/password.vue')
       },
-      {
-        path: '/index',
-        name: 'splash',
-        component: () => import('@/views/splash.vue')
-      }
     ]
   },
   {
-    path: "/",
+    path: "/main",
     name: "main",
     component: () => import('@/views/main.vue'),
     children: [

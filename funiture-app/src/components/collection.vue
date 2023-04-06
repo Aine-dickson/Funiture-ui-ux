@@ -7,10 +7,10 @@
             </div>
         </div>
         <div class="flex space-x-3 px-4 overflow-x-auto min-h-[18rem]">
-            <router-link v-for="(item, index) in items" :key="index" :to="{name: 'item', params: {cat: item.category, name: item.name}, props: {item_id: item.id}}" class="h-[16rem] min-w-[65%]">
+            <router-link v-for="(item, index) in funiture" :key="index" :to="{name: 'item', params: {cat: item.category, name: item.name}, props: {item_id: item.id, name: item.name}}" class="h-[16rem] min-w-[65%]">
                 <article class="h-full w-full relative flex flex-col items-center justify-center bg-yellow-200 rounded-t-[10rem]">
                     <div class="h-[65%] w-[70%]">
-                        <img src="@/assets/images/seat.jpg" :alt="item.name" class="object-fit h-full w-full">
+                        <img :src="item.img" :alt="item.name" class="object-fit h-full w-full">
                     </div>
                     <div class="absolute -bottom-6 w-[90%] rounded-lg m-auto flex justify-between items-center shadow-2xl bg-white px-4 py-1">
                         <div class="flex flex-col dark:text-black">
@@ -33,12 +33,15 @@
 
     export default {
         setup(){
-            const items = ref([{
-                name: "Chair",
-                category: "Sofas",
-                id: 234,
-                price: "$25"
-            }])
+
+            const funiture = ref([
+                {name: "sofa", img: '/assets/images/sofa.png', price: '$23', category:'bean', id: 1},
+                {name: "bank", img: '/assets/images/bank.png', price: '$27', category:'chair', id: 2},
+                {name: "chaircl", img: '/assets/images/chaircl.png', price: '$25', category:'sofas', id: 3},
+                {name: "throne", img: '/assets/images/throne.png', price: '$30', category:'sofas', id: 4},
+                {name: "super", img: '/assets/images/super.png', price: '$28', category:'bean', id: 5},
+                {name: "wooden", img: '/assets/images/wooden.png', price: '$15', category:'chair', id: 6},
+            ])
 
             const fetchItems = async() => {
                 try{
@@ -53,7 +56,7 @@
                 }
             }
 
-            return {items}
+            return {funiture}
         }
     }
 

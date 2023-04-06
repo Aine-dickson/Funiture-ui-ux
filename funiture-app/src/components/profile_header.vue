@@ -2,7 +2,7 @@
     <header>
         <div v-if="account" class="flex flex-col items-center space-y-8">
             <div class="rounded-full w-24 h-24 overflow-hidden">
-                <img src="@/assets/images/seat.jpg" alt="profile-pic" class="object-fill h-full w-full">
+                <img src="@/assets/images/bank.png" alt="profile-pic" class="object-fill h-full w-full">
             </div>
             <div class="flex items-center justify-evenly w-full">
                 <span @click="viewSorter()" class="border border-gray-400 bg-slate-900 dark:bg-slate-300 text-slate-300 dark:text-slate-900 font-thin p-2 rounded-lg">General</span>

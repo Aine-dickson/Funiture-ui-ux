@@ -2,18 +2,18 @@
     <main class="text-xl">
         <article class="rounded-t-[10rem] h-[18rem] w-[80%] m-auto bg-yellow-200 mb-4 flex items-center justify-center">
             <div class="h-[65%] w-[70%]">
-                <img src="@/assets/images/seat.jpg" :alt="name" class="object-fill h-full w-full">
+                <img :src="item.img" :alt="item.name" class="object-fill h-full w-full">
             </div>
         </article>
         <section class="space-y-2">
             <div class="flex justify-between items-center">
                 <div class="flex flex-col">
-                    <span>{{ name }}</span>
-                    <span>{{ reviews }}</span>
+                    <span>{{ item.name }}</span>
+                    <span>{{ item.reviews }}</span>
                 </div>
                 <div class="flex justify-between items-center w-28 bg-gray-500 rounded-3xl h-9 text-2xl dark:text-black">
                     <span @click="dec" class="flex justify-center items-center bg-white rounded-full h-full w-9">-</span>
-                    <span class="font-bold text-white">{{ quantity }}</span>
+                    <span class="font-bold text-white">{{ item.quantity }}</span>
                     <span @click="inc" class="flex justify-center items-center bg-white rounded-full h-full w-9">+</span>
                 </div>
             </div>
@@ -30,7 +30,7 @@
             <div class="border-b border-b-black border-dashed"></div>
             <div class="ml-4">
                 <span class="font-bold">Description:</span>
-                <div>{{ desc }}</div>
+                <div>{{ item.desc }}</div>
             </div>
         </section>
     </main>
@@ -43,17 +43,25 @@
 
     export default {
         props: [
-            "item_id"
+            "item_id",
+            "name"
         ],
         setup: (props) => {
             const store = useStore()
-            console.log(props.item_id)
 
-            const name = ref("")
-            const reviews = ref("")
-            const desc = ref("")
+            const name = ref(props.name)
+            const reviews = ref((Math.random())*100)
+            const desc = ref("Lorem ipsum dolor et sare fineo, ripoto ")
             const quantity = ref(1)
             const color = ref([])
+
+            const item = {
+                name: name.value,
+                img: `/assets/images/${name.value}.png`,
+                review: reviews.value,
+                desc: desc.value,
+                quantity: quantity.value
+            }
 
             const fetchItem = async() => {
                 try{
@@ -94,7 +102,7 @@
 
             // fetchItem()
 
-            return {name, reviews, desc, quantity, inc, dec, colorPicker}
+            return {item, inc, dec, colorPicker}
         }
     }
 
