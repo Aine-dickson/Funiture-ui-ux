@@ -43,10 +43,6 @@
             const store = useStore()
             const screenState = computed(() => store.state.screen)
 
-            onMounted(() => {
-                router.push('/home')
-            })
-
             return {screenState}
         }
     }
