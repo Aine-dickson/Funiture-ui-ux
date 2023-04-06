@@ -13,7 +13,7 @@
                 </div>
                 <div class="flex justify-between items-center w-28 bg-gray-500 rounded-3xl h-9 text-2xl dark:text-black">
                     <span @click="dec" class="flex justify-center items-center bg-white rounded-full h-full w-9">-</span>
-                    <span class="font-bold text-white">{{ item.quantity }}</span>
+                    <span class="font-bold text-white">{{ quantity }}</span>
                     <span @click="inc" class="flex justify-center items-center bg-white rounded-full h-full w-9">+</span>
                 </div>
             </div>
@@ -102,7 +102,7 @@
 
             // fetchItem()
 
-            return {item, inc, dec, colorPicker}
+            return {quantity, item, inc, dec, colorPicker}
         }
     }
 
